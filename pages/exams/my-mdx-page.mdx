@@ -1,16 +1,46 @@
 import MdLayoutComponent from '../../layouts/MdLayout'
+import Question from '../../components/Question'
+import SingleChoice from '../../components/SingleChoice'
+import Option from '../../components/Option'
+
+# The Rust Programming Language
+
+## 3. 一般的なプログラミングの概念
+
+## 3.1. 変数と可変性
+
+第2章で触れた通り、変数は標準で不変になります。これは、Rustが提供する安全性や簡便な並行性の利点を享受する形でコードを書くための選択の1つです。
+ところが、まだ変数を可変にするという選択肢も残されています。どのように、そしてなぜRustは不変性を推奨するのか、さらには、なぜそれとは違う道を選びたくなることがあるのか見ていきましょう。
+
+変数が不変であると、値が一旦名前に束縛されたら、その値を変えることができません。これを具体的に説明するために、**projects**ディレクトリに`cargo new --bin variables`コマンドを使って、**variables**という名前のプロジェクトを生成しましょう。
+
+それから、新規作成した**variables**ディレクトリで、**src/main.rs**ファイルを開き、その中身を以下のコードに置き換えましょう。このコードはまだコンパイルできません:
+
+```html
+<html>
+hoge
+</html>
+```
+
+<Question>
+    <>ゴーシュは町の活動写真館で</>
+    <SingleChoice>
+        <Option>セロ</Option>
+        <Option>ギター</Option>
+        <Option>トランペット</Option>
+    </SingleChoice>
+    <>を弾く係りでした。けれどもあんまり上手でないという評判でした。上手でないどころではなく実は仲間の楽手のなかではいちばん下手でしたから、いつでも楽長にいじめられるのでした。
+    ひるすぎみんなは楽屋に円くならんで今度の町の音楽会へ出す第六交響曲こうきょうきょくの練習をしていました。</>
+    <SingleChoice>
+        <Option>トランペット</Option>
+        <Option>オーボエ</Option>
+        <Option>リコーダー</Option>
+    </SingleChoice>
+    <>は一生けん命歌っています。</>
+</Question>
 
 
-# My MDX page
 
-This is a list in markdown:
 
-- One
-- Two
-- Three
-
-Checkout my React **component**:
-
-[Google](https://google.com)
 
 export default ({ children }) => <MdLayoutComponent>{children}</MdLayoutComponent>
